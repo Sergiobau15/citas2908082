@@ -5,10 +5,42 @@ public class Consultorio {
     public String direccion;
     public Integer numero;
 
+    //CONSTRUCTORES
+    public Consultorio() {
+    }
 
-    public Consultorio(String direccion, Integer numero) {
+    public Consultorio(Integer id, String direccion, Integer numero) {
+        this.id = id;
         this.direccion = direccion;
         this.numero = numero;
     }
+
+    //GETTERS Y SETTERS
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public Integer getNumero() {
+        return numero;
+    }
+
+    public void setNumero(Integer numero) {
+        this.numero = numero;
+    }
+
+    
+    
     
 }
