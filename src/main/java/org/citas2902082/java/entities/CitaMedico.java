@@ -10,8 +10,9 @@ public class CitaMedico extends Cita implements IAgendable{
     private Estado estado;
 
     //CONSTRUCTORES
-    public CitaMedico(LocalDateTime fecha, Paciente paciente, String motivo, Medico medico, Estado estado) {
-        super(fecha, paciente);
+    public CitaMedico(Integer id, LocalDateTime localDateTime, Paciente paciente, Consultorio consultorio, String motivo,
+    Medico medico, Estado estado) {
+        super(id, localDateTime, paciente, consultorio);
         this.motivo = motivo;
         this.medico = medico;
         this.estado = estado;

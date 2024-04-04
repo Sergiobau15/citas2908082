@@ -7,7 +7,7 @@ public class Paciente extends Usuario{
 
     private String correoElectronico;
     private Long celular;
-    private LocalDateTime fechaNacimiento;
+    private LocalDate fechaNacimiento;
     private double altura;
     private double peso;
     private TipoSangre tipoSangre;
@@ -15,12 +15,12 @@ public class Paciente extends Usuario{
 
     //CONSTRUCTORES
     public Paciente(Integer id, String nombres, String apellidos, TipoIdentificacion tipoIdentificacion,
-            Long numeroIdentificacion, String correoElectronico, Long celular, LocalDateTime fechaNacimiento,
+            Long numeroIdentificacion, String correoElectronico, Long celular, LocalDate localDate,
             double altura, double peso, TipoSangre tipoSangre, char factorRH) {
         super(id, nombres, apellidos, tipoIdentificacion, numeroIdentificacion);
         this.correoElectronico = correoElectronico;
         this.celular = celular;
-        this.fechaNacimiento = fechaNacimiento;
+        this.fechaNacimiento = localDate;
         this.altura = altura;
         this.peso = peso;
         this.tipoSangre = tipoSangre;
@@ -32,6 +32,8 @@ public class Paciente extends Usuario{
     public String getCorreoElectronico() {
         return correoElectronico;
     }
+
+    
 
     public void setCorreoElectronico(String correoElectronico) {
         this.correoElectronico = correoElectronico;
@@ -48,12 +50,12 @@ public class Paciente extends Usuario{
     }
 
 
-    public LocalDateTime getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
 
 
-    public void setFechaNacimiento(LocalDateTime fechaNacimiento) {
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
